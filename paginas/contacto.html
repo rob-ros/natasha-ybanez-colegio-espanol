@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Colegio Español | Contacto</title>
+  <link rel="website icon" type="png" href="../img/logo-cole.png">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/style-contacto.css">
+  <link rel="stylesheet" href="../css/responsivo.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <!-- Estilos específicos del modal -->
+  <link rel="stylesheet" href="../css/style-modal.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="../index.html" class="logo">
+      <img src="../img/logo-cole.png" alt="Logo Colegio Español" class="logo-img"/>
+      Colegio Español
+    </a>
+    <nav class="nav" id="nav">
+      <button class="nav-toggle" id="navToggle">☰</button>
+      <ul class="nav-list" id="navList">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="redes.html">Redes</a></li>
+        <li><a href="contacto.html" class="active">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container" style="background-color: #FFFDF0 !important;">
+    <h1>Contáctanos</h1>
+    <form class="contact-form">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" required />
+
+      <label for="email">Correo:</label>
+      <input type="email" id="email" required />
+
+      <label for="message">Mensaje:</label>
+      <textarea id="message" rows="5" required></textarea>
+
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+  </main>
+
+  <footer class="site-footer nuevo-footer">
+    <div class="footer-row">
+      <div class="footer-logo-col">
+        <img src="../img/logo-cole.png" alt="Logo Colegio Español" class="footer-logo-img" />
+      </div>
+      <div class="footer-col">
+        <h3>Páginas</h3>
+        <hr />
+        <div class="footer-links">
+          <span>Inscripciones</span><br />
+          <span>Calendario</span><br />
+          <span>Contacto</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Información</h3>
+        <hr />
+        <div class="footer-links">
+          <span>Políticas de privacidad</span><br />
+          <span>Políticas de cookies</span><br />
+          <span>Términos y condiciones</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Contacto</h3>
+        <hr />
+        <div class="footer-contact">
+          <div class="footer-contact-sub">Dirección del Colegio</div>
+          <div class="footer-contact-info">Av. Ppal. Urb. Bermúdez, Edif. N°6. Maracay - Edo. Aragua.</div>
+          <div class="footer-contact-sub">Teléfonos y correos electrónicos</div>
+          <div class="footer-contact-info">0414-5638963 <br> uepcolegioespanol@gmail.com</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom-row">
+      <div class="footer-copyright">
+        © 2025 Colegio Español.
+      </div>
+      <div class="footer-social">
+        <a href="https://api.whatsapp.com/send/?phone=584145638963&text&type=phone_number&app_absent=0" class="footer-social-link" target="_blank">
+          <img src="../icons/whatsapp.svg" alt="Whatsapp" class="footer-social-img" />
+        </a>
+        <a href="https://www.instagram.com/uepcolegioespanolmcy/" class="footer-social-link" target="_blank">
+          <img src="../icons/instagram.svg" alt="Instagram" class="footer-social-img" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <!-- Lógica del modal de éxito -->
+  <script src="../js/modal-exito.js"></script>
+
+  <!-- Marcado del modal -->
+  <div id="modalExito" class="modal-overlay">
+    <div class="modal-container">
+      <h2>¡Éxito!</h2>
+      <p>Su mensaje fue enviado correctamente, gracias por comunicarse con nosotros.</p>
+      <button id="btnCerrarModal" class="btn">Aceptar</button>
+    </div>
+  </div>
+</body>
+</html>
