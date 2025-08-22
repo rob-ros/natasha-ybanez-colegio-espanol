@@ -1,0 +1,238 @@
+body, html {
+  margin-top: 0 !important;
+}
+.site-header {
+  margin-top: 0 !important;
+}
+/* Paleta de colores */
+:root {
+  --azul-oscuro-1: #001840;
+  --azul-oscuro-2: #102A71;
+  --amarillo-1:     #F5C400;
+  --amarillo-2:     #FFDC5F;
+  --blanco:          #FFFDF0;
+  --texto:           #102A71;
+  --fondo:           #FFFDF0;
+  --transition-fast: 0.2s ease-in-out;
+}
+
+/* Reset y ajustes globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--fondo);
+  color: var(--texto);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+html {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--azul-oscuro-1);
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 9999;
+  margin-top: 0 !important;
+  box-shadow: 0 2px 8px 0 rgba(0,24,64,0.07);
+}
+.container {
+  max-width: 800px;
+  margin: 6.5rem auto 2rem auto;
+  padding: 0 1rem;
+}
+
+
+/* Enlaces */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Botones generales */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--amarillo-1);
+  color: var(--azul-oscuro-2);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.btn:hover {
+  background-color: var(--amarillo-2);
+}
+
+/* Header y navegación */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--azul-oscuro-1);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: var(--blanco);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--blanco);
+  font-size: 1.5rem;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-list a {
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color var(--transition-fast);
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+  background-color: var(--amarillo-2);
+}
+
+/* Hero */
+.hero {
+  background-color: var(--azul-oscuro-2);
+  color: var(--blanco);
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Sección de servicios */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.services article {
+  background-color: var(--blanco);
+  border: 2px solid var(--azul-oscuro-1);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform var(--transition-fast);
+}
+
+.services article:hover {
+  transform: translateY(-5px);
+}
+
+/* Contenedor general */
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Formulario de contacto */
+.contact-form label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--azul-oscuro-1);
+  border-radius: 4px;
+  transition: border-color var(--transition-fast);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--amarillo-1);
+  outline: none;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--azul-oscuro-1);
+  color: var(--blanco);
+  font-size: 0.9rem;
+}
+
+/* Scroll reveal: estilos iniciales */
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Responsive (menú móvil) */
+@media (max-width: 768px) {
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--azul-oscuro-1);
+    flex-direction: column;
+    width: 200px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-list.show {
+    transform: translateX(0);
+  }
+}

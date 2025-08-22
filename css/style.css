@@ -1,0 +1,361 @@
+@media (max-width: 700px) {
+  .etapas-img {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: -16px;
+    margin-right: -16px;
+    border-radius: 0;
+  }
+}
+/* ——————————————————————————————————————————————
+   Sección video con fondo
+   —————————————————————————————————————————————— */
+.video {
+  position: relative;
+  width: 100%;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(0.6) blur(1px);
+}
+.video-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+.video-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.25);
+}
+.video-content p {
+  font-size: 1.3rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+@media (max-width: 700px) {
+  .video-content h1 {
+    font-size: 1.5rem;
+  }
+  .video-content p {
+    font-size: 1rem;
+  }
+  .video {
+    min-height: 220px;
+  }
+}
+.pub-img {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.ubicacion-mapa-container {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+/* ——————————————————————————————————————————————
+   Imágenes a los lados del mapa
+   —————————————————————————————————————————————— */
+.ubicacion-mapa-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  padding-left: 8px;
+  padding-right: 8px;
+  box-sizing: border-box;
+}
+
+.pub-img {
+  max-width: 340px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px 0 rgba(0,24,64,0.10);
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .ubicacion-mapa-flex {
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .pub-img {
+    max-width: 98vw;
+  }
+}
+/* Contenedor responsivo para la imagen de etapas */
+.etapas-img-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
+@media (max-width: 900px) {
+  .etapas-img-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* ——————————————————————————————————————————————
+   Sección de ubicación
+   —————————————————————————————————————————————— */
+/* ——————————————————————————————————————————————
+   Sección de ubicación tipo carta
+   —————————————————————————————————————————————— */
+.ubicacion-outer {
+  background: var(--blanco);
+  padding: 2.5rem 0 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ubicacion-card {
+  background: var(--azul-oscuro-1);
+  border-radius: 18px;
+  box-shadow: 0 2px 16px 0 rgba(0,24,64,0.10);
+  padding: 2.2rem 2.2rem 1.5rem 2.2rem;
+  max-width: 480px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ubicacion-title {
+  color: var(--amarillo-1);
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.ubicacion-mapa-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ubicacion-mapa-container iframe {
+  width: 100%;
+  min-width: 220px;
+  max-width: 420px;
+  height: 320px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 16px 0 rgba(0,24,64,0.10);
+}
+@media (max-width: 900px) {
+  .ubicacion-card {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    max-width: 98vw;
+  }
+  .ubicacion-title {
+    font-size: 1.5rem;
+  }
+  .ubicacion-mapa-container iframe {
+    max-width: 98vw;
+    height: 200px;
+  }
+}
+/* Imagen de etapas responsiva */
+.etapas-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+  box-shadow: 0 2px 8px 0 rgba(16,42,113,0.10);
+}
+/* style.css */
+
+/* ——————————————————————————————————————————————
+   Paleta de colores
+   —————————————————————————————————————————————— */
+:root {
+  --azul-oscuro-1: #001840;
+  --azul-oscuro-2: #001840;
+  --amarillo-1:     #F5C400;
+  --amarillo-2:     #FFDC5F;
+  --blanco:          #FFFDF0;
+  --texto:           #FFFDF0;
+  --fondo:           #001840;
+  --transition-fast: 0.2s ease-in-out;
+}
+
+/* ——————————————————————————————————————————————
+   Evitar scroll horizontal no deseado
+   —————————————————————————————————————————————— */
+html,
+body {
+  overflow-x: hidden;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: var(--blanco) !important;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+/* ——————————————————————————————————————————————
+   Reset y ajustes globales
+  —————————————————————————————————————————————— */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--fondo);
+  color: var(--texto);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  padding-top: 5.2rem;
+}
+
+/* ——————————————————————————————————————————————
+   Enlaces
+   —————————————————————————————————————————————— */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ——————————————————————————————————————————————
+   Botones generales
+   —————————————————————————————————————————————— */
+.pub-img {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px 0 rgba(0,24,64,0.10);
+  object-fit: cover;
+  display: block;
+}
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--azul-oscuro-1);
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 9999;
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), box-shadow 0.2s;
+  box-shadow: 0 2px 8px 0 rgba(0,24,64,0.07);
+}
+.site-header.nav-hidden {
+  transform: translateY(-110%);
+  box-shadow: none;
+}
+
+.logo-img {
+  height: 3.6rem;
+  width: 3.6rem;
+  min-width: 3.6rem;
+  min-height: 3.6rem;
+  object-fit: cover;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.logo-img {
+  height: 3.6rem;
+  width: 3.6rem;
+  min-width: 3.6rem;
+  min-height: 3.6rem;
+  object-fit: cover;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+/* ——————————————————————————————————————————————
+   Hero
+   —————————————————————————————————————————————— */
+.hero {
+  background-color: var(--azul-oscuro-2);
+  color: var(--blanco);
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+
+/* ——————————————————————————————————————————————
+   Contenedor general
+   —————————————————————————————————————————————— */
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+
+/* ——————————————————————————————————————————————
+   Footer
+   —————————————————————————————————————————————— */
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--azul-oscuro-1);
+  color: var(--blanco);
+  font-size: 0.9rem;
+}
+
+/* ——————————————————————————————————————————————
+   Scroll reveal
+   —————————————————————————————————————————————— */
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
