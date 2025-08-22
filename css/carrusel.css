@@ -1,0 +1,49 @@
+/* ——————————————————————————————————————————————
+   Carrusel full-width
+   —————————————————————————————————————————————— */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel .slides {
+  display: flex;
+  transition: transform 1s cubic-bezier(0.65, 0.05, 0.36, 1);
+  will-change: transform;
+}
+
+.carousel .slide {
+  min-width: 100%;
+}
+
+.carousel .slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ——————————————————————————————————————————————
+   Botones overlay del carrusel
+   —————————————————————————————————————————————— */
+.carousel button.prev,
+.carousel button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: var(--blanco);
+  font-size: 2rem;
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel button.prev {
+  left: 1rem;
+}
+
+.carousel button.next {
+  right: 1rem;
+}
